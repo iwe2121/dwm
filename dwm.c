@@ -1643,6 +1643,7 @@ sendmon(Client *c, Monitor *m)
 	c->mon = m;
 	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
 	attachstack(c);
+	attachaside(c);
 	focus(NULL);
 	arrange(NULL);
 }
